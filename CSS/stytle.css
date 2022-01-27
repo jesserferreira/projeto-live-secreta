@@ -20,7 +20,51 @@ img {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: inherit;
+}
+
+i .btn-whatsapp {
+    color: blue;
+}
+
+.btn-whatsapp {
+    position: fixed;
+    outline: solid;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+    cursor: pointer;
+    background: #1ed760;
+    color: white;
+    font-size: 2rem;
+    border: 2px solid black;
+
+    /* NÃO FUNCIONOU
+    animation: pulsar 0.8s ease-out 1s infinite alternate none running;
+    */
+
+    animation-name: balance;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: none;
+    animation-play-state: running paused running;
+}
+
+@keyframes balance {
+    0% { 
+        transform: translate(-1px,-1px) rotate(-3deg);
+    }
+    50% { 
+        transform: translate(0px,0px) rotate(0deg);
+    }
+    100% {
+        transform: translate(2px,2px) rotate(3deg);
+    }
 }
 
 ul {
@@ -209,6 +253,7 @@ ul {
     }
 }
 
+
 .rodape {
     padding: 100px 0 20px 0;
 }
@@ -233,7 +278,7 @@ ul {
     border: 2px solid #111;
     border-radius: 50%;
     padding: 20px;
-    width: 65px;
+    width: 70px;
     transition: 0.3s ease-in-out;
 }
 
